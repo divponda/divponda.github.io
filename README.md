@@ -10,7 +10,7 @@ I believe in the power of technology to make lives better and bring ideas to lif
 
 - **Juicy Jams**: A sensory educational toy that turns fruits into musical instruments, blending engineering with creativity – [Live Demo Here](https://drive.google.com/file/d/165B5rpaZwRHzaQOktck4hmjWQA2KSukU/view)
 - **Quotr**: An AI-powered app for automating event quoting, built with GPT and APIs to connect users with local businesses seamlessly.  
-- **Portfolio Volatility Predictor**: A neural network model for financial forecasting, where we optimized trading strategies and built a robust understanding of portfolio management.  
+- **Portfolio Volatility Predictor**: Building A neural network model for financial forecasting for the Michigan Investment Group, where I will optimize trading strategies and build a robust understanding of portfolio management.  
 
 When I'm not coding or working on projects, you'll find me playing poker, practicing yoga, or diving into the world of nutritious cooking.
 
@@ -20,7 +20,7 @@ When I'm not coding or working on projects, you'll find me playing poker, practi
 
 I'm always exploring new technologies, but here are some of the tools and languages I love to work with:
 
-- **Programming Languages**: C++, Python, MATLAB  
+- **Programming Languages**: C++, Python  
 - **Web Development**: React.js, Node.js, HTML, CSS  
 - **Data Tools**: Tableau, Matplotlib, Seaborn  
 
