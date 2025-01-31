@@ -8,7 +8,7 @@ Hi there! I'm **Divya Ponda**, a Computer Engineering student at the **Universit
 
 I believe in the power of technology to make lives better and bring ideas to life. Over the years, I've been fortunate to work on exciting projects like:
 
-- **Juicy Jams**: A sensory educational toy that turns fruits into musical instruments, blending engineering with creativity.  
+- **Juicy Jams**: A sensory educational toy that turns fruits into musical instruments, blending engineering with creativity – [Live Demo Here](https://drive.google.com/file/d/165B5rpaZwRHzaQOktck4hmjWQA2KSukU/view)
 - **Quotr**: An AI-powered app for automating event quoting, built with GPT and APIs to connect users with local businesses seamlessly.  
 - **Portfolio Volatility Predictor**: A neural network model for financial forecasting, where we optimized trading strategies and built a robust understanding of portfolio management.  
 
