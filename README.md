@@ -1,44 +1,182 @@
-# Welcome to My Personal Website! 🌟
+# Divya Ponda - Personal Website
 
-Hi there! I'm **Divya Ponda**, a Computer Engineering student at the **University of Michigan**, passionate about creating impactful solutions in technology. My journey is driven by a blend of curiosity, innovation, and a love for collaboration. Whether it’s building backend infrastructure, exploring financial systems, or working across product and engineering, I love diving into complex problems and making things work.
+A clean, minimalist personal website built with modern web technologies and thoughtful design principles.
+
+## 🌟 Features
+
+- **Multi-page structure** with intuitive navigation
+- **Clean, minimalist design** inspired by modern portfolio sites
+- **Dark/light mode toggle** with system preference detection
+- **Responsive design** that works on all devices
+- **Subtle interactive effects** including custom cursor and gentle animations
+- **Semantic HTML5** structure for accessibility
+- **Performance optimized** with throttled animations and reduced motion support
+
+## 📁 Project Structure
+
+```
+personalwebsite/
+├── index.html          # Home page - intro, education, hobbies
+├── projects.html       # Projects & Experience
+├── thoughts.html       # Blog posts and reflections
+├── now.html           # Current activities and updates
+├── style.css          # Shared styles across all pages
+├── script.js          # Interactive functionality
+├── README.md          # This file
+└── assets/            # Static assets (if any)
+```
+
+## 🚀 Deployment to GitHub Pages
+
+### Initial Setup
+
+1. **Create a new repository** on GitHub named `yourusername.github.io` (replace `yourusername` with your actual GitHub username)
+
+2. **Clone this repository** to your local machine:
+   ```bash
+   git clone https://github.com/yourusername/yourusername.github.io.git
+   cd yourusername.github.io
+   ```
+
+3. **Copy all website files** to the repository root:
+   ```bash
+   cp /path/to/personalwebsite/* .
+   ```
+
+### Deployment Steps
+
+1. **Add all files to git**:
+   ```bash
+   git add .
+   ```
+
+2. **Commit your changes**:
+   ```bash
+   git commit -m "Initial website deployment"
+   ```
+
+3. **Push to GitHub**:
+   ```bash
+   git push origin main
+   ```
+
+4. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Click on "Settings" tab
+   - Scroll down to "Pages" section
+   - Under "Source", select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Click "Save"
+
+5. **Your site will be live at**: `https://yourusername.github.io`
+
+### Updating Your Site
+
+To update your website:
+
+1. Make changes to your local files
+2. Add and commit changes:
+   ```bash
+   git add .
+   git commit -m "Update website content"
+   ```
+3. Push to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+Changes will be live within a few minutes.
+
+## 🎨 Customization
+
+### Colors and Themes
+
+The color scheme is defined in CSS variables at the top of `style.css`. Key variables include:
+
+- `--accent`: Primary accent color
+- `--accent-light`: Light variant of accent color
+- `--text-primary`: Main text color
+- `--text-secondary`: Secondary text color
+- `--bg-color`: Background color
+
+### Content Updates
+
+- **Home page**: Edit `index.html` to update intro, education, and hobbies
+- **Projects**: Modify `projects.html` to add/remove projects and experience
+- **Thoughts**: Update `thoughts.html` to add new blog posts or reflections
+- **Now page**: Keep `now.html` current with what you're working on
+
+### Interactive Effects
+
+Mouse effects can be adjusted in `script.js`:
+- Cursor trail count and behavior
+- Parallax movement intensity
+- Animation timing and easing
+
+## 🔧 Technical Details
+
+### Browser Support
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Graceful degradation for older browsers
+- Mobile-optimized touch interactions
+
+### Performance
+- Throttled mouse event handlers
+- Reduced motion support for accessibility
+- Optimized animations with `requestAnimationFrame`
+- Lazy loading and efficient DOM manipulation
+
+### Accessibility
+- Semantic HTML structure
+- Proper ARIA labels
+- Keyboard navigation support
+- Respects user's motion preferences
+- High contrast ratios in both light and dark modes
+
+## 📝 Content Guidelines
+
+### Writing Style
+- Keep copy conversational but professional
+- Use active voice and clear, concise language
+- Break up text with headings and whitespace
+- Update the "Now" page regularly to keep it current
+
+### Project Descriptions
+- Lead with the impact or problem solved
+- Include relevant technologies used
+- Provide links to demos or code when available
+- Keep descriptions concise but informative
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**GitHub Pages not updating**: 
+- Check the Actions tab for build errors
+- Ensure all files are committed and pushed
+- Verify the Pages source is set to the correct branch
+
+**Interactive effects not working**:
+- Check browser console for JavaScript errors
+- Ensure `script.js` is loading properly
+- Test on different devices/browsers
+
+**Styling issues**:
+- Verify `style.css` is linked correctly in all HTML files
+- Check for CSS syntax errors
+- Test with browser developer tools
+
+## 🤝 Contributing
+
+This is a personal website template. Feel free to:
+- Fork and adapt for your own use
+- Submit issues for bugs or improvements
+- Share feedback and suggestions
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 📖 About Me
-
-I believe in the power of technology to make lives better and bring ideas to life. Over the years, I’ve had the opportunity to work on exciting projects like:
-
-- **Juicy Jams**: A sensory educational toy that turns fruits into musical instruments, blending engineering with creativity – [Live Demo Here](https://drive.google.com/file/d/165B5rpaZwRHzaQOktck4hmjWQA2KSukU/view)  
-- **Quotr**: An AI-powered app for automating event quoting, built with GPT and APIs to connect users with local businesses seamlessly  
-- **Arc24 Capital**: I developed tools to analyze structured credit strategies and visualize housing and REIT data trends, helping shape real investment decisions  
-- **Oaklet**: As a founding backend engineer, I built HIPAA-compliant infrastructure for a mental health EHR startup, shipping secure authentication, real-time analytics pipelines, and Stripe-integrated billing systems
-
-When I’m not coding or working on projects, you’ll find me playing poker, practicing yoga, or diving into the world of nutritious cooking.
-
----
-
-## 🔧 Skills & Tools
-
-I'm always exploring new technologies, but here are some of the tools and languages I love to work with:
-
-- **Programming Languages**: C++, Python, TypeScript  
-- **Web & Backend Development**: React.js, Node.js, AWS Lambda, DynamoDB  
-- **Data & Analytics**: Tableau, Matplotlib, Seaborn, Pandas  
-
----
-
-## 📂 What I’m Working On
-
-Right now, I’m focused on improving backend architecture at Oaklet, building systems that are both scalable and secure. I’m also continuing to explore the intersection of finance and tech through my work with Arc24 and the **Michigan Investment Group**, where we research trading strategies and credit markets.
-
----
-
-## 📫 Let's Connect
-
-- **GitHub**: [github.com/divponda](https://github.com/divponda)  
-- **LinkedIn**: [linkedin.com/in/divyaponda](https://linkedin.com/in/divyaponda)  
-- **Email**: [divponda@umich.edu](mailto:divponda@umich.edu)  
-
----
-
-*Thanks for visiting my website. Let’s build something amazing together!* 🚀
+Built with ❤️ using vanilla HTML, CSS, and JavaScript. No frameworks, just clean code and thoughtful design.

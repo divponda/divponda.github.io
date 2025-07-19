@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Divya Ponda - Computer Engineering student at University of Michigan">
-    <meta name="keywords" content="portfolio, developer, software engineer, computer engineering, university of michigan, backend engineer">
+    <meta name="description" content="Divya Ponda - Computer Engineering student at University of Michigan">
+    <meta name="keywords" content="Divya Ponda, Computer Engineering, University of Michigan, software engineer, backend engineer">
     <meta name="author" content="Divya Ponda">
     
     <title>Divya Ponda</title>
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -34,14 +34,13 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Divya Ponda</a>
+            <a href="index.html" class="nav-logo">Divya Ponda</a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#now">now</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="index.html" class="active">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="thoughts.html">thoughts</a></li>
+                    <li><a href="now.html">now</a></li>
                 </ul>
                 <button class="theme-toggle" aria-label="Toggle theme">
                     <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -66,71 +65,26 @@
     <!-- Main Content -->
     <main class="main">
         <div class="container">
-            <!-- Hero Section -->
-            <section id="home" class="hero">
-                <h1>Welcome to my personal website! 🌟</h1>
-                <p class="intro">
-                    Hi there! I'm <strong>Divya Ponda</strong>, a Computer Engineering student at the <strong>University of Michigan</strong>, passionate about creating impactful solutions in technology. My journey is driven by a blend of curiosity, innovation, and a love for collaboration. Whether it's building backend infrastructure, exploring financial systems, or working across product and engineering, I love diving into complex problems and making things work.
+            <!-- Intro Section -->
+            <section class="page-header">
+                <h1 class="page-title">Hi, I'm Divya Ponda</h1>
+                <p class="page-subtitle">
+                    A Computer Engineering student at the University of Michigan. I love building things that work, especially at the intersection of systems, product, and finance. I'm always chasing down hard problems and cleaner solutions.
                 </p>
             </section>
 
             <div class="divider"></div>
 
-            <!-- About Section -->
-            <section id="about" class="section">
-                <h2>about</h2>
+            <!-- Education Section -->
+            <section class="section">
+                <h2 class="section-title">education</h2>
                 <div class="content">
-                    <p>
-                        I believe in the power of technology to make lives better and bring ideas to life. When I'm not coding or working on projects, you'll find me playing poker, practicing yoga, or diving into the world of nutritious cooking.
-                    </p>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <h2>projects</h2>
-                <div class="content">
-                    <div class="project">
-                        <h3>Oaklet</h3>
-                        <p>As a founding backend engineer, I built HIPAA-compliant infrastructure for a mental health EHR startup, shipping secure authentication, real-time analytics pipelines, and Stripe-integrated billing systems.</p>
-                        <div class="project-tags">
-                            <span>HIPAA Compliance</span>
-                            <span>AWS</span>
-                            <span>TypeScript</span>
-                            <span>Stripe API</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>Juicy Jams</h3>
-                        <p>A sensory educational toy that turns fruits into musical instruments, blending engineering with creativity.</p>
-                        <div class="project-tags">
-                            <span>Embedded Systems</span>
-                            <span>Hardware Engineering</span>
-                            <span>Creative Tech</span>
-                        </div>
-                        <a href="https://drive.google.com/file/d/165B5rpaZwRHzaQOktck4hmjWQA2KSukU/view" target="_blank" rel="noopener noreferrer" class="project-link">live demo</a>
-                    </div>
-
-                    <div class="project">
-                        <h3>Quotr</h3>
-                        <p>An AI-powered app for automating event quoting, built with GPT and APIs to connect users with local businesses seamlessly.</p>
-                        <div class="project-tags">
-                            <span>GPT Integration</span>
-                            <span>API Development</span>
-                            <span>AI/ML</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>Arc24 Capital</h3>
-                        <p>I developed tools to analyze structured credit strategies and visualize housing and REIT data trends, helping shape real investment decisions.</p>
-                        <div class="project-tags">
-                            <span>Financial Analysis</span>
-                            <span>Data Visualization</span>
-                            <span>Python</span>
+                    <div class="card">
+                        <h3 class="card-title">University of Michigan</h3>
+                        <div class="card-content">
+                            <p><strong>Computer Engineering</strong></p>
+                            <p>Focusing on computer architecture, software engineering, and financial systems. Passionate about the intersection of low-level systems design and high-level product strategy.</p>
+                            <p><em>Standout coursework:</em> Computer Architecture, Software Engineering, Data Structures & Algorithms, Systems Programming</p>
                         </div>
                     </div>
                 </div>
@@ -138,68 +92,38 @@
 
             <div class="divider"></div>
 
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h2>skills</h2>
-                <div class="content">
-                    <div class="skill-group">
-                        <h3>Programming Languages</h3>
-                        <p>C++, Python, TypeScript</p>
+            <!-- Hobbies Section -->
+            <section class="section">
+                <h2 class="section-title">when I'm not coding</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <span class="hobby-emoji">🧘‍♀️</span>
+                        <div class="hobby-name">Yoga</div>
+                        <div class="hobby-desc">Finding balance and clarity through movement</div>
                     </div>
-                    <div class="skill-group">
-                        <h3>Web & Backend Development</h3>
-                        <p>React.js, Node.js, AWS Lambda, DynamoDB</p>
+                    
+                    <div class="hobby-item">
+                        <span class="hobby-emoji">♠️</span>
+                        <div class="hobby-name">Poker</div>
+                        <div class="hobby-desc">Strategy, probability, and reading people</div>
                     </div>
-                    <div class="skill-group">
-                        <h3>Data & Analytics</h3>
-                        <p>Tableau, Matplotlib, Seaborn, Pandas</p>
+                    
+                    <div class="hobby-item">
+                        <span class="hobby-emoji">👩‍🍳</span>
+                        <div class="hobby-name">Cooking</div>
+                        <div class="hobby-desc">Experimenting with nutritious, delicious meals</div>
                     </div>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
-            <!-- Now Section -->
-            <section id="now" class="section">
-                <h2>now</h2>
-                <div class="content">
-                    <p>
-                        Right now, I'm focused on improving backend architecture at Oaklet, building systems that are both scalable and secure. I'm also continuing to explore the intersection of finance and tech through my work with Arc24 and the <strong>Michigan Investment Group</strong>, where we research trading strategies and credit markets.
-                    </p>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2>contact</h2>
-                <div class="content">
-                    <p>
-                        I'm always interested in hearing about new opportunities and projects. Feel free to reach out if you'd like to collaborate!
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:divponda@umich.edu" class="contact-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            divponda@umich.edu
-                        </a>
-                        <a href="https://github.com/divponda" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            github
-                        </a>
-                        <a href="https://linkedin.com/in/divyaponda" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                            linkedin
-                        </a>
+                    
+                    <div class="hobby-item">
+                        <span class="hobby-emoji">🎭</span>
+                        <div class="hobby-name">Theater</div>
+                        <div class="hobby-desc">Storytelling and creative expression</div>
+                    </div>
+                    
+                    <div class="hobby-item">
+                        <span class="hobby-emoji">🧩</span>
+                        <div class="hobby-name">Puzzles</div>
+                        <div class="hobby-desc">Logic games and brain teasers</div>
                     </div>
                 </div>
             </section>
@@ -211,6 +135,6 @@
         </div>
     </main>
 
-    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
