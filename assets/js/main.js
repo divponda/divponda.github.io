@@ -12,23 +12,6 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', theme);
 });
 
-// Mobile Menu Toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-mobileMenuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a nav link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
-});
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -44,56 +27,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add navbar background on scroll
-const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = 'var(--shadow)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for animations
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
-
 // Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+function updateActiveLink() {
     let current = '';
+    const scrollPosition = window.scrollY + 120; // Offset for navbar
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
+        
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
@@ -104,13 +50,51 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+}
+
+// Update active link on scroll
+window.addEventListener('scroll', updateActiveLink);
+
+// Update active link on page load
+document.addEventListener('DOMContentLoaded', updateActiveLink);
+
+// Intersection Observer for fade-in animations (optional, keeping minimal)
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe sections for subtle animations
+document.querySelectorAll('.section').forEach(section => {
+    section.style.opacity = '0.95';
+    section.style.transform = 'translateY(10px)';
+    observer.observe(section);
 });
 
-// Add active link styles
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--accent);
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // Handle escape key to blur focused elements
+    if (e.key === 'Escape') {
+        document.activeElement.blur();
     }
-`;
-document.head.appendChild(style);
+});
+
+// Prefers reduced motion check
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (prefersReducedMotion.matches) {
+    // Disable animations for users who prefer reduced motion
+    document.documentElement.style.setProperty('--transition-duration', '0s');
+    
+    // Remove smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'auto';
+}
