@@ -19,7 +19,7 @@ let mouseX = 0;
 let mouseY = 0;
 
 // Create fewer cursor trail elements for subtlety
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 1; i++) {
     const trail = document.createElement('div');
     trail.className = 'cursor-trail';
     document.body.appendChild(trail);
@@ -47,8 +47,8 @@ function animateTrails() {
     cursorTrails.forEach((trail, index) => {
         const delay = (index + 1) * 100; // Slower, more elegant
         setTimeout(() => {
-            trail.x += (mouseX - trail.x) * 0.05; // Much slower following
-            trail.y += (mouseY - trail.y) * 0.05;
+            trail.x += (mouseX - trail.x) * 0.15; // Smoother following
+            trail.y += (mouseY - trail.y) * 0.15;
             trail.element.style.left = trail.x - 1.5 + 'px';
             trail.element.style.top = trail.y - 1.5 + 'px';
             trail.element.style.opacity = 0.4 - (index * 0.1); // More subtle opacity
@@ -112,6 +112,17 @@ function updateActiveNavLink() {
 
 // Update active link on page load
 document.addEventListener('DOMContentLoaded', updateActiveNavLink);
+
+// Smooth scroll navigation for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
 
 // Subtle parallax effect for floating shapes - much reduced
 const floatingShapes = document.querySelectorAll('.floating-shape');
@@ -260,6 +271,27 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
+});
+
+// Enhanced nav backdrop blur on scroll
+let lastScrollY = 0;
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 50) {
+        nav.style.backdropFilter = 'blur(10px)';
+        nav.style.background = document.body.getAttribute('data-theme') === 'dark' 
+            ? 'rgba(15, 15, 26, 0.8)' 
+            : 'rgba(250, 250, 250, 0.8)';
+    } else {
+        nav.style.backdropFilter = 'blur(20px)';
+        nav.style.background = document.body.getAttribute('data-theme') === 'dark'
+            ? 'rgba(15, 15, 26, 0.85)'
+            : 'rgba(250, 250, 250, 0.85)';
+    }
+    
+    lastScrollY = scrollY;
 });
 
 // Handle page visibility changes to pause animations when not visible
